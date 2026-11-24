@@ -1,0 +1,96 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.filters button[aria-pressed="true"] {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+  font-weight: 600;
+}
+.table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 42rem;
+  background: var(--card);
+}
+caption {
+  text-align: left;
+  padding: 0.75rem;
+  font-weight: 600;
+  color: var(--fg);
+  caption-side: top;
+}
+th,
+td {
+  border-bottom: 1px solid var(--line);
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+  color: var(--muted);
+}
+td:first-child {
+  color: var(--fg);
+  font-weight: 500;
+}
+th {
+  color: var(--fg-strong);
+  font-weight: 600;
+  background: var(--card-hover);
+}
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+.timeline {
+  list-style: none;
+  padding: 0;
+  border-left: 1px solid var(--line-hover);
+  margin-left: 0.5rem;
+}
+.timeline li {
+  padding: 0 0 1.4rem 1.4rem;
+  position: relative;
+}
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -0.4rem;
+  top: 0.45rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--bg);
+}
+.timeline time {
+  font-weight: 600;
+  color: var(--fg-strong);
+}
+.shield {
+  width: 4.5rem;
+  height: auto;
+  float: right;
+  margin: 0 0 1rem 1rem;
+}
+.shield-body {
+  fill: var(--card-hover);
+  stroke: var(--line-hover);
+  stroke-width: 3;
+}
+.shield-check {
+  fill: none;
+  stroke: var(--ok);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+article h3 {
+  margin-top: 1.5rem;
+}
