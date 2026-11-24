@@ -1,0 +1,117 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr minmax(16rem, 22rem);
+  gap: 2.5rem;
+  align-items: center;
+  padding: 4.5rem 0 3.5rem;
+}
+.hero p {
+  font-size: 1.15rem;
+  max-width: 56ch;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+.hero-actions .button {
+  padding: 0.65rem 1.25rem;
+}
+.hero-illustration {
+  display: block;
+  width: 100%;
+  max-width: 22rem;
+  height: auto;
+  justify-self: center;
+  border: 0;
+  background: none;
+}
+.big-number {
+  font-size: clamp(2.2rem, 4vw, 2.8rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin: 0 0 0.4rem;
+  color: var(--fg-strong);
+}
+.card:hover {
+  background: var(--card-hover);
+}
+.bars {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+  max-width: 44rem;
+}
+.bars li {
+  display: grid;
+  grid-template-columns: 6rem 1fr 3rem;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--fg);
+}
+.bars .bar-track {
+  display: block;
+  height: 0.6rem;
+  border-radius: 999px;
+  background: var(--line);
+  overflow: hidden;
+}
+.bars .bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--fg);
+  width: var(--width);
+  animation: grow 1.2s ease-out;
+}
+@keyframes grow {
+  from {
+    width: 0;
+  }
+}
+.video-layout {
+  max-width: 56rem;
+}
+.video-player {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #000;
+}
+.video-player iframe,
+.video-player video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-title {
+  margin: 1rem 0 0.2rem;
+}
+.video-meta {
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+  color: var(--muted-2);
+}
+.audio-box {
+  margin-top: 1.5rem;
+}
+.audio-box audio {
+  width: 100%;
+  max-width: 34rem;
+  color-scheme: dark;
+}
+@media (max-width: 48rem) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 2.5rem;
+  }
+  .hero-illustration {
+    max-width: 15rem;
+  }
+}
